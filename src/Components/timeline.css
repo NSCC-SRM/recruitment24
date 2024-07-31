@@ -1,0 +1,109 @@
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .timeline-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline {
+    position: relative;
+    width: 80%;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #56CAD1;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-event {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem 0;
+    position: relative;
+  }
+  
+  .timeline-circle {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border: 5px solid #56CAD1;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    transform: translate(570px);
+    
+  }
+  
+  .timeline-content {
+    position: relative;
+    padding: 10px;
+    background-color: black;
+    border: 1px solid #00aaff;
+    max-width: 200px;
+  }
+  
+  .timeline-content.left {
+    margin-left: 1rem;
+    text-align: left;
+    transform: translate(310px);
+    
+  }
+  
+  .timeline-content.left::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #00aaff;
+    transform: translate(195px);
+  }
+  
+  .timeline-content.right {
+    margin-left: auto;
+    text-align: left;
+    transform: translate(-340px);
+    
+  }
+  
+  .timeline-content.right::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #00aaff transparent transparent;
+    transform: translate(-10px);
+    
+  }
+  
+  .timeline-date {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .timeline-text {
+    font-size: 1rem;
+  }
+  
